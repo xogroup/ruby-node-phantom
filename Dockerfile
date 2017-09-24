@@ -1,6 +1,5 @@
 FROM vcarballo/ruby-qt:5.1.1
 
-
 RUN apt-get update -yqq \
  && apt-get install -yqq --no-install-recommends \
     curl \
@@ -13,13 +12,6 @@ RUN curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linu
  && apt-get purge --auto-remove -y curl \
  && apt-get clean \
  && rm -rf /tmp/* /var/lib/apt/lists/* 
-
-
-
-
-
-
-
 
 # RUN apt-get update -yqq \
 #  && apt-get install -yqq --no-install-recommends \
