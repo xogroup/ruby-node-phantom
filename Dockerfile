@@ -1,9 +1,12 @@
-FROM vcarballo/ruby-qt:5.5.1
+FROM xogroup/ruby-node:2.2.8
 
 RUN apt-get update -yqq \
  && apt-get install -yqq --no-install-recommends \
-    curl \
-    nodejs 
+    build-essential \
+    qt5-default \
+    libqt5webkit5-dev \
+    libfontconfig \
+    curl
  
 RUN mkdir /tmp/phantomjs 
 RUN curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
